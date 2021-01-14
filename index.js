@@ -26,7 +26,7 @@ mongoose
   .then(() => {
     // Run your code here, after you have insured that the connection was made
     console.log('Connection has been established');
-    /* return Recipe.create({
+    return Recipe.create({
       title: 'Strawberry Cheese Cake',
       level: 'Amateur Chef',
       ingredients: ['strawberries', 'cream cheese', 'sugar'],
@@ -34,7 +34,9 @@ mongoose
       dishType: 'dessert',
       duration: 90
     });
-    */
+  })
+  .then((strawberryCake) => {
+    console.log(strawberryCake);
     return Recipe.create(recipeArray);
   })
   .then((manyrecipes) => {
