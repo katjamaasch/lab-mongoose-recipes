@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+/*
 const fs = require('fs');
 let recipeArrayRawData = fs.readFileSync('data.json');
 let recipeArray = JSON.parse(recipeArrayRawData);
+*/
 mongoose.set('useFindAndModify', false);
 
 // Import of the model Recipe from './models/Recipe.model.js'
@@ -37,7 +39,7 @@ mongoose
   })
   .then((strawberryCake) => {
     console.log(strawberryCake);
-    return Recipe.create(recipeArray);
+    return Recipe.create(data);
   })
   .then((manyrecipes) => {
     /*console.log(cakerecipe);*/
