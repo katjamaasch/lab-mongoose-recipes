@@ -42,8 +42,9 @@ mongoose
     return Recipe.create(data);
   })
   .then((manyrecipes) => {
-    /*console.log(cakerecipe);*/
-    console.log(manyrecipes);
+    for (let recipe of manyrecipes) {
+      console.log(recipe.title);
+    }
     return Recipe.findOneAndUpdate(
       {
         title: 'Rigatoni alla Genovese'
